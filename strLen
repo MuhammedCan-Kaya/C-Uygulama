@@ -1,1 +1,22 @@
+#include <stdio.h>
 
+int main()
+{
+    char str[100];
+    printf("Lütfen bir kelime ya da cümle giriniz (100 karakterden uzun olmamalıdır): ");
+
+    char c;
+    int uzunluk = 0;
+
+    while ((c = getchar()) != '\n')
+    {
+        if(c != ' ')
+        {
+            str[uzunluk] = c;
+            uzunluk ++;
+        }
+
+    }
+    printf("Kelimenin/cümlenin uzunluğu: %d", uzunluk);
+    printf("\n");
+}
