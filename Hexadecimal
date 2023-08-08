@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("Ondalık bir sayı giriniz: ");
+    double decimalNumber;
+    scanf("%lf", &decimalNumber);
+    printf("a: %lf\n", decimalNumber);
+    printf("Hexadecimal karşılığı: %A\n", decimalNumber);
+}
