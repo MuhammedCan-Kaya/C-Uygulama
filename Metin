@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *dosya;
+    dosya = fopen("metin.txt", "w");
+
+    if (dosya == NULL)
+    {
+        printf("Dosya acilirken bir hata olustu.\n");
+        return 1;
+    }
+
+    fprintf(dosya, "Bu metin dosyasina yazildi.\n");
+    fclose(dosya);
+    printf("Dosya basariyla olusturuldu ve metin yazildi.\n");
+
+    dosya = fopen("metin.txt", "a");
+    fprintf(dosya, "Yeni metin eklendi.\n");
+    fclose(dosya);
+}
